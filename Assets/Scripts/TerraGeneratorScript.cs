@@ -10,9 +10,9 @@ public class TerraGeneratorScript : MonoBehaviour {
     
     void Start()
     {
-        Generate_v2_by_object(grassOriginal,-4);
-        Generate_v2_by_object(dirtOriginal,-5);
-        Generate_v2_by_object(stoneOriginal,-6);
+        Generate_v2_by_object(grassOriginal,-2);
+        // Generate_v2_by_object(dirtOriginal,-3);
+        // Generate_v2_by_object(stoneOriginal,-4);
     }
 
     void Generate_v2_by_object(Transform original, float y) {
