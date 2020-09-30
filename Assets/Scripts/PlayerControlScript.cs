@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class PlayerControlScript : MonoBehaviour
 {
-
     public Animator animator;
     public Rigidbody2D r2d;
     public float speed = 5;
-
     // Update is called once per frame
     void Update()
     {
@@ -22,17 +20,13 @@ public class PlayerControlScript : MonoBehaviour
         animator.SetFloat("x", x);
         animator.SetBool("stop", x == 0f);
     }
-
-
-    public int countBlockDown = 1;
-
+    public int countBlockDown = 0;
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.GetComponent<BlockScript>() != null) {
             countBlockDown += 1;    
         }
     }
-
     void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.GetComponent<BlockScript>() != null) {
